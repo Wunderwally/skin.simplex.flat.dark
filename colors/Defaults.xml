@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<colors>
+	<color name="White">FF000000</color>
+	<color name="Gray">FF000000</color>
+<!-- 	<color name="DarkGray">FF000000</color> -->
+	<color name="Shadow">00000000</color>
+	<color name="Black">FFFFFFFF</color>
+	<color name="Blue">FF30a9ec</color>
+</colors>

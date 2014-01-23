@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<includes>
+	<include file="CommonViews.xml"/>
+	<include file="Defaults.xml"/>
+	<include file="IncludesDialogs.xml"/>
+	<include file="IncludesHome.xml"/>
+	<include file="IncludesOSD.xml"/>
+	<include file="IncludesHUD.xml"/>
+<!-- 
+	<include file="DialogFilters.xml"/>
+	<include file="ViewsDialog.xml"/>
+	<include file="Custom1_HomeMenu.xml"/>
+ -->
+
+	<include name="Time">
+		<control type="grouplist">
+			<posx>1062</posx>
+			<posy>18</posy>
+			<width>128</width>
+			<align>right</align>
+			<itemgap>12</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<posy>0</posy>
+				<width min="0" max="200">auto</width>
+				<height>13</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>System.Time</info>
+				<font>plot1</font>
+				<textcolor>shadow</textcolor>
+			</control>
+		</control>
+		<control type="grouplist">
+			<posx>1062</posx>
+			<posy>16</posy>
+			<width>128</width>
+			<align>right</align>
+			<itemgap>13</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<visible>Player.HasAudio + Player.Playing</visible>
+				<posy>17</posy>
+				<width>16</width>
+				<height>18</height>
+				<texture>BackgroundAudio.png</texture>
+			</control>
+			<control type="label">
+				<posy>0</posy>
+				<width min="0" max="200">auto</width>
+				<height>13</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>System.Time</info>
+				<font>plot1</font>
+				<textcolor>Blue</textcolor>
+			</control>
+		</control>
+	</include>
+	<!-- 
+<include name="Header">
+		<control type="grouplist">
+			<posx>90</posx>
+			<posy>6</posy>
+			<orientation>horizontal</orientation>
+			<width>800</width>
+			<align>left</align>
+			<itemgap>13</itemgap>
+			<control type="label">
+				<width min="1" max="500">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container.SecondTitle]</label>
+				<font>list2</font>
+				<textcolor>Shadow</textcolor>
+			</control>
+			<control type="label">
+				<width min="1" max="500">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-14</textoffsetx>
+				<label>$INFO[Container.FirstTitle]</label>
+				<font>list2</font>
+				<textcolor>Shadow</textcolor>
+				<visible>IsEmpty(Container.SecondTitle)</visible>
+			</control>
+			<control type="label">
+				<width min="1" max="400">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety>
+				<label>$INFO[Container.FirstTitle]</label>
+				<font>info1</font>
+				<textcolor>Shadow</textcolor>
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
+			</control>
+		</control>
+		<control type="grouplist">
+			<posx>90</posx>
+			<posy>4</posy>
+			<orientation>horizontal</orientation>
+			<width>800</width>
+			<align>left</align>
+			<itemgap>13</itemgap>
+			<control type="label">
+				<width min="1" max="500">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container.SecondTitle]</label>
+				<font>list2</font>
+				<textcolor>Gray</textcolor>
+			</control>
+			<control type="label">
+				<width min="1" max="500">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-14</textoffsetx>
+				<label>$INFO[Container.FirstTitle]</label>
+				<font>list2</font>
+				<textcolor>Gray</textcolor>
+				<visible>IsEmpty(Container.SecondTitle)</visible>
+			</control>
+			<control type="label">
+				<width min="1" max="400">auto</width>
+				<height>46</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety>
+				<label>$INFO[Container.FirstTitle]</label>
+				<font>info1</font>
+				<textcolor>DarkGray</textcolor>
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
+			</control>
+		</control>
+	</include>
+ -->
+	<include name="HeaderAudio">
+		<control type="label">
+			<posx>90</posx>
+			<posy>6</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
+			<font>list2</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>4</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
+			<font>list2</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderVideo">
+		<control type="label">
+			<posx>90</posx>
+			<posy>600</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31307]</label>
+			<font>list2</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>4</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31307]</label>
+			<font>list2</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderShared">
+		<control type="label">
+			<posx>90</posx>
+			<posy>6</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31504]</label>
+			<font>list2</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>4</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31504]</label>
+			<font>list2</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderPictures">
+		<control type="label">
+			<posx>90</posx>
+			<posy>6</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
+			<font>list2</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>4</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
+			<font>list2</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderApplications">
+		<control type="label">
+			<posx>90</posx>
+			<posy>6</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31304]</label>
+			<font>list2</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>4</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[31304]</label>
+			<font>list2</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderSettings">
+		<control type="label">
+			<posy>26</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31200]</label>
+			<font>list1</font>
+			<textcolor>Gray</textcolor>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31202]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(appearancesettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31203]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(videossettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31204]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(musicsettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31205]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(picturessettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31206]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(18)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31207]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(systemsettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31201]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(CustomSettings.xml)</visible>
+		</control>
+	</include>
+	<include name="Background">
+		<control type="largeimage">
+			<texture>back.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+		</control>
+	
+	</include>
+</includes>

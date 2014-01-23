@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<window id="56">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>back.png</texture>
+		</control>
+		<include>HeaderSettings</include>
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>47</posx>
+			<posy>106</posy>
+			<width>272</width>
+			<height>480</height>
+			<itemgap>1</itemgap>
+			<onleft>200</onleft>
+			<onright>200</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<orientation>vertical</orientation>
+			<control type="button" id="1">
+				<width>272</width>
+				<font>list1</font>
+				<textcolor>Blue</textcolor>
+				<focusedcolor>Black</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<height>54</height>
+				<posy>5</posy>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<pulseonselect>false</pulseonselect>
+				<label>Mods</label>
+			</control>
+		
+		</control>
+		<control type="group" id="200">
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1)</visible>
+				<description>Control Area</description>
+				<posx>355</posx>
+				<posy>106</posy>
+				<width>925</width>
+				<height>600</height>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<orientation>vertical</orientation>
+				<control type="radiobutton" id="1004">
+					<description>Show On Deck before Recently Added</description>
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<posy>5</posy>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>$LOCALIZE[31104] $LOCALIZE[31501]</label>
+					<selected>!Skin.HasSetting(RecentlyAddedFirst)</selected>
+					<onclick>Skin.ToggleSetting(RecentlyAddedFirst)</onclick>
+				</control>
+		
+				<control type="radiobutton" id="1006">
+					<description>Show Search</description>
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<posy>5</posy>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>$LOCALIZE[31109] $LOCALIZE[31400]</label>
+					<selected>!Skin.HasSetting(HideSearch)</selected>
+					<onclick>Skin.ToggleSetting(HideSearch)</onclick>
+				</control>
+				<control type="radiobutton" id="1007">
+					<description>Show System Menu</description>
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<posy>5</posy>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>$LOCALIZE[31105]</label>
+					<onclick>Skin.ToggleSetting(HideSystem)</onclick>
+					<selected>!Skin.HasSetting(HideSystem)</selected>
+				</control>
+				
+			
+				
+					<control type="radiobutton" id="12101">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Developer Mode</label>
+					<onclick>Skin.ToggleSetting(dev.enable)</onclick>
+					<selected>Skin.HasSetting(dev.enable)</selected>
+				</control>
+				<control type="button" id="12102">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Reset Settings</label>
+					<onclick>Skin.ResetSettings</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>Control.Move(3,101)</onclick>
+					
+				</control>
+				<control type="button" id="12103">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>Blue</textcolor>
+					<focusedcolor>Black</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Reload Skin</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+				</control>
+				
+				
+				
+			</control>
+			
+		</control>
+		<include>LeftSideMenuSettings</include>
+	</controls>
+</window>
