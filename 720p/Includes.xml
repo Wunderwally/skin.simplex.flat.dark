@@ -6,12 +6,6 @@
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesOSD.xml"/>
 	<include file="IncludesHUD.xml"/>
-<!-- 
-	<include file="DialogFilters.xml"/>
-	<include file="ViewsDialog.xml"/>
-	<include file="Custom1_HomeMenu.xml"/>
- -->
-
 	<include name="Time">
 		<control type="grouplist">
 			<posx>1062</posx>

@@ -1036,11 +1036,7 @@
 							<width min="1" max="600">auto</width>
 							<align>left</align>
 							<label>$INFO[Container(11001).ListItem(0).Year]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]</label>
-<<<<<<< HEAD
-							<textcolor>Black</textcolor>
-=======
 							<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 							<shadowcolor>Shadow</shadowcolor>
 							<font>heading3</font>
 						</control>
@@ -1053,11 +1049,7 @@
 							<width min="1" max="600">auto</width>
 							<align>left</align>
 							<label>$INFO[Container(11001).ListItem(0).Title]$INFO[Container(11001).ListItem(0).Season, &#xB7; Season , Episode ]$INFO[Container(11001).ListItem(0).Episode]</label>
-<<<<<<< HEAD
-							<textcolor>Black</textcolor>
-=======
 							<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 							<shadowcolor>Shadow</shadowcolor>
 							<font>heading3</font>
 						</control>
@@ -1119,7 +1111,7 @@
 						</control-->
 						<!-- Media flags -->
 						<control type="grouplist">
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HideMediaFlags)!Skin.HasSetting(HideMediaFlags)</visible>
 							<orientation>horizontal</orientation>
 							<height>18</height>
 							<align>left</align>
@@ -1245,11 +1237,7 @@
 						<width min="1" max="798">auto</width>
 						<label>$INFO[Container(11000).ListItem(0).Title]</label>
 						<aligny>center</aligny>
-<<<<<<< HEAD
-						<textcolor>Black</textcolor>
-=======
 						<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 						<shadowcolor>Shadow</shadowcolor>
 						
 						<font>osd1</font>
@@ -1263,11 +1251,7 @@
 						<width min="1" max="798">auto</width>
 						<label>$INFO[Container(11000).ListItem(0).TVShowTitle]</label>
 						<aligny>center</aligny>
-<<<<<<< HEAD
-						<textcolor>Black</textcolor>
-=======
 						<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 						<shadowcolor>Shadow</shadowcolor>
 						
 						<font>osd1</font>
@@ -1301,11 +1285,7 @@
 							<align>left</align>
 							<label>$INFO[Container(11000).ListItem(0).Year]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]
 							</label>
-<<<<<<< HEAD
-							<textcolor>Black</textcolor>
-=======
 							<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 							<shadowcolor>Shadow</shadowcolor>
 							<font>heading3</font>
 						</control>
@@ -1318,11 +1298,7 @@
 							<width min="1" max="600">auto</width>
 							<align>left</align>
 							<label>$INFO[Container(11000).ListItem(0).Title]$INFO[Container(11000).ListItem(0).Season, &#xB7; Season , Episode ]$INFO[Container(11000).ListItem(0).Episode]</label>
-<<<<<<< HEAD
-							<textcolor>Black</textcolor>
-=======
 							<textcolor>Blue</textcolor>
->>>>>>> 1e87f07f9deacf1376482d9df37d9974fb3227f4
 							<shadowcolor>Shadow</shadowcolor>
 							<font>heading3</font>
 						</control>
@@ -1384,7 +1360,7 @@
 						</control-->
 						<!-- Media flags -->
 						<control type="grouplist">
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HideMediaFlags)!Skin.HasSetting(HideMediaFlags)</visible>
 							<orientation>horizontal</orientation>
 							<height>18</height>
 							<align>left</align>
